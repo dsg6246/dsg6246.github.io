@@ -1,129 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Dylan</title>
+    <title>Community App</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
-        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <div id="image">
-            <i class="fa-solid fa-user fa-xl"></i>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contacts">Contacts</a></li> 
-            </ul>
 
+    <header>
+        <h1>Community Connect</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#events">Events</a>
+            <a href="#posts">Posts</a>
+            <a href="#account-info">Account-Info</a>
         </nav>
     </header>
-    <!-- hero section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Dylan</h1>
-            <p>A passionate high school Computer Science student </p>
-            <a href="https://github.com/dsg6246" class="cta-button" target="_blank">See My Work</a>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I'm a high school student with a keen intrest in learning programming!</p>
-    </section>
-    <!-- Skills section -->
-    <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill-item">
-                <i class="fa-solid fa-code fa-beat fa-2xl" style="color: #174492;"></i>
-                <h3>Languages</h3>
-                <p>HTML, CSS,Python</p>
-            </div>
-            <div class="skill-item">
-                <i class="fa-brands fa-python fa-bounce fa-2xl" style="color: #174492;"></i>
-                <h3>Frameworks</h3>
-                <p>Flask Django</p>
-            </div>
-            <div class="skill-item">
-                <i class="fa-brands fa-git fa-shake fa-2xl" style="color: #174492;"></i>
-                <h3>Tools</h3>
-                <p>Git,Github, VS Code, MySQL</p>
-            </div>
-        </div>
-    </section>
-    <section class="project" id="project">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <img src="images/portfolio.png" alt="" width="80%"> 
 
-                <h3>Personal Portfolio</h3>
-                <p>A website to showcase my projects and skills built with HTML, CSS, and JavaScript</p>
-            </div>
-            <div class="project-item">
-                <img src="images/imggame.gif" alt="" width="80%">
-                <h3>Simple Python Game</h3>
-                <p>A fun game built using Python that allows players to interact with a graphical interface.</p>
-            </div>
-            <div class="project-item">
-                <img src="images/webapp.png" alt="" width="80%">
-                <h3>Full Stack Web App</h3>
-                <p>A combination of front-end with back-end frameworks and databasds to deliver dynamic and respopnsive funcitonallity. </p>
-            </div>
+    
+
+    <section id="events">
+        <h2>Community Events</h2>
+        <div id="event-list">
+            <!-- Events will appear here -->
+        </div>
+        <div class="event-form">
+            <input type="text" id="event-name" placeholder="Event name">
+            <input type="date" id="event-date">
+            <button onclick="addEvent()">Add Event</button>
         </div>
     </section>
-    <!-- Contact section -->
-    <section id="contacts" class="contacts" >
-        <h2>Contact Me</h2>
-        <p>I'd love to connect! Feel free to reach out for collobration, feedback, or opportunities. </p>
-        <div class="contacts-container">
-            <!-- Left side -->
-            <div class="contacts-info">
-                <div class="contacts-item">
-                    <i class="fa-regular fa-envelope fa-2xl" style="color: #00ff4c;"></i>
-                    <p style="font-size: 2rem; color: white;">Email</p>
-                    <p><a href="mailto:dylgal28@bergen.org">dylgal28@bergen.org</a></p>
-                </div>
-                <div class="contacts-item">
-                    <i class="fa-brands fa-github fa-2xl" style="color: #00ff04;"></i>
-                    <p style="font-size: 2rem; color: white;">Github</p>
-                    <p><a href="https://github.com/dsg6246" target="_blank">https://github.com/dsg6246</a></p>
-                </div>
-                <div class="contacts-item">
-                    <i class="fa-brands fa-linkedin fa-2xl" style="color: #04ff00;"></i>
-                    <p style="font-size: 2rem; color: white;">LinkedIn</p>
-                    <p><a href="">LinkedIn</a></p>
-                </div>
-            </div>
-            <!-- Right side -->
-            <div class="contacts-form">
-                <p style="font-size: 2rem;">Send Me a Message</p>
-                <form action="">
-                    <input type="text" name="name" id="" placeholder="Your Name"> 
-                    <input type="email" name="name" id="" placeholder="Your Email"> 
-                    <textarea name="message" id="" placeholder="Your Message"  ></textarea> <br>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-           
+
+    <section id="discussions">
+        <h2>Discussions</h2>
+        <div id="discussion-list">
+            <!-- Discussions will appear here -->
         </div>
-        
+        <div class="discussion-form">
+            <textarea id="new-discussion" placeholder="Start a discussion..."></textarea>
+            <button onclick="addDiscussion()">Start Discussion</button>
+        </div>
     </section>
+
     <footer>
-        <p>&copy; 2024 All Rights Reserved.</p>
-
+        <p>&copy; 2025 Community Connect</p>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
